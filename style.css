@@ -1,0 +1,399 @@
+body {
+    background-color: rgb(248, 209, 158);
+    margin: 0px;
+}
+header {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: brown;
+    border-radius: 10px;
+    color: white;
+}
+header img {
+    height: 10vh;
+}
+header p {
+    margin: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+header p:nth-child(1) {
+    font-size: 4vh;
+}
+header p:nth-child(2) {
+    font-size: 3vh;
+    border-top: 1px solid white;
+}
+header a {
+    font-size: 3vh;
+    color: white;
+    text-decoration: none;
+}
+main {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+main section {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: auto;
+}
+#slidercont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#slider {
+    width: 60vw;
+    height: 46vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#sliderline {
+    position: relative;
+    left: 0vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 180vw;
+    transition: 0s;
+}
+#sliderline img {
+    width: 60vw;
+    height: auto;
+    border-radius: 20px;
+    order: 0;
+}
+.sliderbutton {
+    background-color: rgba(5, 6, 245, 0.0);
+    color: white;
+    padding: 0px;
+    border: none;
+    width: 3vw;
+    height: 3vw;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.sliderbutton img {
+    width: 8vw;
+    margin-top: -2vw;
+}
+#sliderbuttonfirst img {
+    transform: rotateZ(90deg);
+    margin-left: -1vw;
+}
+#sliderbuttonlast img {
+    transform: rotateZ(-90deg);
+    margin-left: -4vw;
+}
+.cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+.focusingridient {
+    border: 0.2vw brown solid;
+    border-radius: 30px;
+}
+.decideingridient {
+    transform: scale(1.3);
+}
+#table {
+    border: 1px white solid;
+    border-radius: 50px;
+    width: 75vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+#rulet {
+    width: 15vw;
+    height: 15vw;
+    border: 1px white solid;
+    border-top-left-radius: 50%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#rulet div {
+    width: 0px;
+    height: 0px;
+    border-top: 2vw red solid;
+    border-left: 1vw transparent solid;
+    border-right: 1vw transparent solid;
+    position: absolute;
+    z-index: 2;
+}
+#rulet img {
+    width: 10vw;
+    height: 10vw;
+}
+.ruletanimation {
+    animation-name: spin;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(180deg); 
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+#rulet button {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 1vw;
+    margin-bottom: 1vw;
+    border-radius: 20px;
+    border: 1px black solid;
+    cursor: pointer;
+}
+main article {
+    width: 20vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px white solid;
+    border-radius: 50px;
+}
+.ingridient {
+    height: 15vh;
+}
+#smallkorg {
+    height: 9vh;
+}
+#midkorg {
+    height: 12vh;
+}
+#bigkorg {
+    height: 15vh;
+}
+main p {
+    margin: 0px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+.anotation {
+    background-color: brown;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    font-size: 3vh;
+    margin: 5vh 1vh 5vh 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main article p {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+main article div {
+    text-align: center;
+    color: black;
+    word-wrap: normal;
+    font-weight: 500;
+}
+.compaundaddedingr {
+    color: black;
+    word-wrap: normal;
+    font-weight: 500;
+    margin: 0vh 1vh 0vh 1vh;
+    padding: 2px;
+    border-radius: 2px;
+}
+#banner {
+    background-color: rgba(5, 6, 245, 0.0);
+    color: white;
+    display: none;
+    font-weight: bold;
+    width: 35vh;
+    height: 35vh;
+    border-radius: 50%;
+    position: fixed;
+    top: 60vh;
+    left: 70vw;    
+    transition: 2000ms;
+    padding: 5vh;
+    z-index: 10;
+}
+#banner div {
+    background-color: green;
+    border: 10px white solid;
+    width: 25vh;
+    height: 25vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+#ban1 {
+    margin-top: 2vh;
+}
+#ban2 {
+    border: red solid 2px;    
+}
+#ban3 {
+    font-size: 5vh;
+}
+.sellbanner {
+    background-color: green;
+    width: 16vw;
+    height: 2vw;
+    border-radius: 30px;
+    border: 2px white solid;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    border-radius: 20px;
+}
+footer form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7vw;
+}
+footer form div {
+    border: 1px white solid;
+    margin: 1vw;
+    padding: 1vw;
+    border-radius: 10px;
+}
+footer h1 {
+    align-self: center;
+    margin: 3vw 0px 2vw 0px;
+}
+footer h4 {
+    margin: 0px;
+}
+footer input {
+    margin: 1vh;
+}
+footer input[type="text"] {
+    width: 20vw;
+    height: 2vw;
+    outline: none;
+    border-radius: 1vw;
+    font-size: 1vw;
+    padding-left: 1vw;
+}
+footer input[type="radio"] {
+    appearance: none;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+footer input[type="radio"]:checked {
+    background-size: 100%;
+}
+#calling:checked {
+    background-image: url(./calls_icon-icons.com_72002.png);
+}
+#emailwriting:checked {
+    background-image: url(./email-icon.png);
+}
+#telegramwriting:checked {
+    background-image: url(./tg.png);
+}
+#viberwriting:checked {
+    background-image: url(./vb.png);
+}
+#whatsappwriting:checked {
+    background-image: url(./wp.png);
+}
+footer input[type="submit"] {
+    appearance: none;
+    width: 30vw;
+    height: 5vw;
+    border-radius: 2vw;
+    background-color: green;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    font-size: 2vw;
+    box-shadow: -1vw 0vw 1vw 1vw gray;
+    transition: 1s;
+}
+footer input[type="reset"] {
+    appearance: none;
+    width: 30vw;
+    height: 5vw;
+    border-radius: 2vw;
+    background-color: rgb(155, 20, 20);
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    font-size: 2vw;
+    box-shadow: 1vw 0vw 1vw 1vw gray;
+    transition: 1s;
+}
+#connectionvariants div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#finalinput {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+footer label {
+    margin: 1vh;
+}
+.valid {
+    background-color: green;
+}
+.invalid {
+    background-color: red;
+}
+.neutral {
+    background-color: brown;
+}
+.dontneed {
+    background-color: gray;
+}
+.validradio {
+    border: 2px green solid;
+}

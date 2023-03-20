@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./logo.jpg" alt="">
+        <div>
+            <p>Пиццерия "Ешь, не обляпайся"</p>
+            <p>Конструктор пиццы</p>
+        </div>
+        <span><a href="#">На главную ></a></span>
+    </header>
+    <main>
+        <section id="slidercont">
+            <button class="sliderbutton" id="sliderbuttonfirst">
+                <img src="./buttonpizza.png" alt="&#8592;">
+            </button>
+            <div id="slider">
+                <div id="sliderline">
+                    <img src="./sl1.jpg" alt="">
+                    <img src="./sl2.jpg" alt="">
+                    <img src="./sl3.jpg" alt="">
+                </div>
+            </div>
+            <button class="sliderbutton" id="sliderbuttonlast">
+                <img src="./buttonpizza.png" alt="&#8594;">
+            </button>
+        </section>
+        <section id="corgesouse">
+            <p class="anotation" id="korgep">Выберите<br>размер коржа</p>
+            <div class="cell">
+                <img class="ingridient" id="smallkorg" src="./korg.png" alt="">
+                <p>Маленький</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="midkorg" src="./korg.png" alt="">
+                <p>Средний</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="bigkorg" src="./korg.png" alt="">
+                <p>Большой</p>
+            </div>
+            <p class="anotation" id="sousep">Выберите<br>соус</p>
+            <div class="cell">
+                <img class="ingridient" id="ketchup" src="./ketchup.png" alt="">
+                <p>Кетчуп</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="bbq" src="./bbq.png" alt="">
+                <p>BBQ</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="slivochniy" src="./slivochniy.png" alt="">
+                <p>Сливочный</p>
+            </div>
+            <p class="anotation" id="toppingp">Выберите<br>топпинги</p>
+            <div class="cell">
+                <img class="ingridient" id="chedder" src="./chedder.png" alt="">
+                <p>Чеддер</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="mocarela" src="./mocarela.png" alt="">
+                <p>Моцарела</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="parmezan" src="./parmezan.png" alt="">
+                <p>Пармезан</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="kolbaski" src="./kolbaski.png" alt="">
+                <p>Колбаски</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="vetchina" src="./vetchina.png" alt="">
+                <p>Ветчина</p>
+            </div>
+            <div class="cell">
+                <img class="ingridient" id="kurica" src="./kurica.png" alt="">
+                <p>Курица</p>
+            </div>
+            <button class="anotation" id="resetp">СБРОС</button>
+        </section>
+        <section id="area">
+            <div id="table">
+                <div></div>
+                <div id="tbcenter"></div>
+                <div id="rulet">
+                    <div></div>
+                    <img src="./rulet.png" alt="">
+                    <button>ВЫБРАТЬ НАУГАД</button>
+                </div>
+            </div>
+            <article id="costcompound">
+                <p>Состав:</p>
+                <div id="compaund"></div>
+                <p id="costanot">Цена:</p>
+                <div id="cost"></div>
+            </article>
+        </section>
+        <div id="banner">
+            <div>
+                <span id="ban1">Получи скидку</span>
+                <span id="ban2">НАЖМИ СЮДА</span>
+                <span id="ban3">20%</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h1>Сделать заказ</h1>
+        <form action="./server.php" method="post">
+            <div>
+                <label for="clientname">Как к Вам обращаться?</label>
+                <input type="text" name="clientname" id="clientname" placeholder="Имя">
+            </div>
+            <div id="connectionvariants">
+                <h4>Виберите способ, которым мы свяжемся с Вами для подтверждения заказа</h4>
+                <div>
+                    <label for="calling">Звонок</label>
+                    <input class="neutral" type="radio" maxlength="30" name="conection" id="calling" value="calling">
+                </div>
+                <div>
+                    <label for="emailwriting">Електронное письмо</label>
+                    <input class="neutral" type="radio" name="conection" id="emailwriting" value="emailwriting">
+                </div>
+                <div>
+                    <label for="telegramwriting">Сообщение в Телеграм</label>
+                    <input class="neutral" type="radio" name="conection" id="telegramwriting" value="telegramwriting">
+                </div>
+                <div>
+                    <label for="viberwriting">Сообщение в Вайбер</label>
+                    <input class="neutral" type="radio" name="conection" id="viberwriting" value="viberwriting">
+                </div>
+                <div>
+                    <label for="whatsappwriting">Сообщение в Ватсап</label>
+                    <input class="neutral" type="radio" name="conection" id="whatsappwriting" value="whatsappwriting">
+                </div>
+            </div>
+            <div>
+                <input type="text" name="email" maxlength="30" placeholder="Email" id="email">
+                <label for="email">Введите Вашу электронную почту</label>
+            </div>
+            <div>
+                <input type="text" name="tel" maxlength="20" placeholder="Номер телефона" id="tel">
+                <label for="tel">Введите Ваш номер телефона</label>
+            </div>
+            <div>
+                <input type="text" name="adress" maxlength="50" placeholder="Адресс доставки" id="adress">
+                <label for="adress">Введите адресс на который доставить пиццу</label>
+            </div>
+            <div id="finalinput">
+                <input type="reset" value="СБРОСИТЬ ДАННЫЕ">
+                <input type="submit" value="ПОДТВЕРДИТЬ ЗАКАЗ" id="submitbut">
+            </div>
+        </form>
+    </footer>
+    <script src="./jquery.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
